@@ -1,5 +1,30 @@
 # Changelog
 
+## v0.2.3
+
+### Added
+
+- Right-click context menu (New session / View session, Quick chat, Copy link) is now available in the My Work inbox list view, matching the existing context menu in the table view.
+- Session automations are now available as an opt-in experiment in Experimental settings, letting you repeat prompts on a schedule.
+- Skills now appear in the slash command picker on the Home screen and in draft workspaces, so you can invoke `/skill-name` before starting a session.
+
+### Changed
+
+- Adding a GitHub repository now opens the command palette repo picker instead of the older dialog.
+- The feedback form now shows a notice that submissions will be posted as public GitHub issues, and the submit button is labeled "Share feedback".
+- The folder view is now available by default when viewing individual files, and the Changes panel no longer shows an "All files" scope.
+
+### Fixed
+
+- Bot account names (e.g. `github-actions[bot]`) are now displayed without the `[bot]` suffix in issue/PR rows, author cells, assignee avatars, search cards, and other UI surfaces.
+- Draft sessions no longer show incorrect setup or worktree state before a prompt is submitted. A loading indicator is shown while a repo is cloning, and the project picker is now available in the draft composer footer.
+- Feedback drafts are now preserved when accidentally dismissing the feedback popover (e.g. outside click, Escape, or sidebar collapse), so you no longer lose what you've typed.
+- Fixed an issue where the find-in-file search window could render outside the app window when opened near the right edge of the screen.
+- Fixed worktree creation timing out with "Timed out fetching the base branch" on large repositories by streaming fetch progress with an idle timeout instead of a fixed wall-clock limit.
+- Recent sessions header now shows correctly in the sidebar when no sessions exist yet
+- Skill files and MCP configs are now correctly rediscovered when resuming a session, fixing a bug where they were silently lost on resume.
+- The Changes pill label in the composer now stays visible at medium session widths, making the diff entry point easier to find.
+
 ## v0.2.2
 
 ### Added
