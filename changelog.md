@@ -1,5 +1,23 @@
 # Changelog
 
+## v0.2.4
+
+### Added
+
+- Queued follow-up messages are now available by default during active sessions, allowing users to queue prompts while a response is in progress.
+- Skills now appear as slash commands in the Quick chat composer, matching the behavior already available in Home and draft workspaces.
+
+### Changed
+
+- Consecutive tool calls are now grouped into a single collapsible panel with a natural-language summary (e.g. "Edited foo.ts and 3 other tool calls"), reducing visual noise in the conversation timeline. The panel shows a live spinner while tools are running, auto-opens during active work, and auto-closes when complete.
+- PR number labels now display as "PR #123" instead of bare "#123" in the workspace PR tab and composer PR pill, avoiding potential confusion with issue references.
+
+### Fixed
+
+- Fixed blurry app icon on Windows at all DPI scales
+- Fixed fullscreen toggle appearing on the wrong side in split panel layouts
+- Restored spinner animation for in-progress todos in the Plan tab
+
 ## v0.2.3
 
 ### Added
