@@ -1,5 +1,33 @@
 # Changelog
 
+## v0.2.5
+
+### Added
+
+- Workflow schedules now support quarter-hour start times (e.g. 12:15 AM), giving more flexibility when configuring daily and weekly automations.
+
+### Changed
+
+- Composer status pills are now hidden while prompt or widget takeover surfaces are active, keeping the focus on the current decision. Pending-decision row numbers also stay aligned when choices wrap to multiple lines.
+- Improved accessibility across onboarding, including better keyboard navigation, focus rings, and screen reader support for theme selection, as well as clearer repository-selection semantics.
+
+### Fixed
+
+- App auto-update now retries failed authenticated requests anonymously, fixing update failures for users whose GitHub token is blocked by SAML/SSO enforcement.
+- Fixed an issue where workflow creation could get stuck on clean installs due to the model picker showing a default model that wasn't recognized by the workflow dialog.
+- Fixed focus ring rendering issues on home composer buttons — including clipping, z-order, WebKit ghost outlines, and pixel misalignments.
+- Fixed sidebar navigation snapping back to the active chat when clicking Workflows or other sidebar items while the quick chat composer was focused.
+- Fixed the composer send button visibly shifting position when switching between sessions.
+- Follow-up messages submitted in the composer while a session is starting are now queued and shown immediately, instead of being blocked until the session is ready.
+- In-place (non-worktree) sessions now stay on the current branch by default. The agent will no longer create new branches, switch branches, or commit without being explicitly asked to do so.
+- Long branch names in the home screen branch picker no longer overflow their container.
+- Nested lists in the markdown editor now render with correct indentation.
+- Nested markdown lists now render with correct indentation.
+- Restored bottom spacing and muted backdrop on the draft session composer so the project and branch pickers are visually grouped with the composer card.
+- Restored live git clone progress updates (e.g. "Receiving objects: 42%") in the workspace cloning indicator
+- Session creation no longer fails when a stale git lock file is present — the lock file is now automatically removed and the operation retried.
+- The My Work inbox filter panel now remembers whether it was open when navigating away and back.
+
 ## v0.2.4
 
 ### Added
@@ -17,6 +45,8 @@
 - Fixed blurry app icon on Windows at all DPI scales
 - Fixed fullscreen toggle appearing on the wrong side in split panel layouts
 - Restored spinner animation for in-progress todos in the Plan tab
+- Fixed sidebar navigation snapping back to the active quick chat when clicking another section (e.g. Workflows) while the chat composer was focused
+- Quick chats with unsent composer drafts are no longer discarded when navigating away from the chats view, so typed text isn't lost when switching to another sidebar section
 
 ## v0.2.3
 
