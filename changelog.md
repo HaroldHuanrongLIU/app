@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.2.11
+
+### Added
+
+- Added a Conversation timeline toggle in Settings > General, letting you enable a timeline scrubber and bookmark controls for quickly navigating long conversations.
+- Added Toolbox in Foundry to the popular MCP servers list in Settings, making it easy to connect a Microsoft Foundry-hosted toolbox endpoint without manual configuration.
+
+### Changed
+
+- Account usage in Settings now shows AI credits terminology, contextual Manage budget and Upgrade plan links, and updated overage copy for users on usage-based billing plans.
+- The copy button next to the PR or issue number now copies the full GitHub URL instead of just the bare number.
+- Users on usage-based billing plans now see AI credit quota labels, accurate quota error messages, and session AI-credit spend in the composer gauge and sidebar.
+
+### Fixed
+
+- Emoji reactions and the approve/request-changes badge are now shown on PR review summary comments in the pull request view.
+- Fixed filter pills (Author, Assignees, etc.) appearing to return no results when typing — items were rendered but hidden behind an invisible block.
+- Fixed scroll position drifting off the viewport in the pull request diff view when inline review threads grow taller (e.g., when a new reply is added to a review thread).
+- Pasting a closed or merged pull request URL into the workspace creation dialog now correctly finds and shows the pull request.
+
 ## v0.2.10
 
 ### Changed
