@@ -1,5 +1,31 @@
 # Changelog
 
+## v0.2.13
+
+### Added
+
+- Added experimental Voice mode that lets you capture speech locally and insert transcripts into the composer using a configurable shortcut, with support for push-to-talk or toggle mode, microphone device selection, and local transcription model management.
+
+### Changed
+
+- In workspace sessions, Cmd+T (Ctrl+T on Windows/Linux) now opens the add-tab palette for the right panel instead of creating a new chat session.
+- Inline review threads the agent skipped (e.g. when several comments arrive at once and the agent collapses them into a single reply) now show an "Unanswered" badge instead of the alarming "Error" badge. The "Error" label is reserved for true failures where a reply was produced but didn't stick. The inline review prompt also now explicitly tells the agent that each thread in a batch needs its own reply_to_comment call.
+- Skill invocations (e.g. /e2e-test-author, /design-foundations) now appear as a labeled card pill in the conversation instead of showing the raw prompt text.
+- The branch sync indicator now shows 'Behind origin/<base> (N↓) · Update branch' when your branch is behind its PR base, making it easier to distinguish this case from being diverged from your own remote.
+- The macOS Help menu now has working links to Documentation, What's New, Automations, MCP Servers, and Skills resources, and menu items have been reorganized and relabeled for clarity.
+- Workspaces now silently auto-sync to their server branch when it's safe to do so. PR review workspaces fast-forward when the local tree is clean and there are no unpushed commits; author workspaces fast-forward or, when there are clean unpushed commits and `merge-tree` predicts no conflicts, auto-merge upstream into the local branch. Anything riskier (dirty tree, predicted conflicts) keeps today's manual "Sync" / "Resolve conflicts" affordance.
+
+### Fixed
+
+- Clicking a session or action in the system tray menu now reliably brings the app to the foreground on macOS.
+- Filter queries using GitHub's comma-list shorthand (e.g. `repo:a/b,c/d`, `label:bug,docs`) now parse into separate filter pill values instead of a single literal value with embedded commas.
+- Fixed crash when editing certain MCP servers in Settings and corrected server type badge display
+- Help menu items (Keyboard Shortcuts, Share Feedback, Run Health Check, Show Home Tips Again, Credits, Manage Copilot Subscription) are now correctly disabled and grayed out during onboarding instead of appearing active but doing nothing when clicked.
+- Pasting a full GitHub URL (e.g. an issue or PR link) into the Add GitHub Repository field now correctly resolves to the repository instead of returning no results.
+- Pasting a GitHub repository URL into the quick-open dialog now correctly finds and shows the matching repository.
+- Selecting multiple values in a filter pill (e.g. Author, Assignee) now correctly matches any of the selected values instead of silently returning no results.
+- The session list now only includes sessions that were directly created by the CLI.
+
 ## v0.2.12
 
 ### Added
