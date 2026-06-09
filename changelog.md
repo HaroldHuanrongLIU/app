@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.2.29
+
+### Changed
+
+- Bare GitHub PR and issue URLs in markdown now render as compact references (owner/repo#123, or #123 for same-repo links); in list items, they also include a state-aware icon and title to match github.com rich reference behavior.
+- Clicking a linked issue from the pull request body or the issue system-prompt card now opens the issue directly in the right panel instead of navigating to an external browser tab or displaying generic system prompt.
+
+### Fixed
+
+- Fixed automations failing to run after switching to a model that does not support reasoning.
+- Fixed terminal failing to launch on Windows when PowerShell 7 was installed from the Microsoft Store.
+- Fixed the timeline picker's collapsed hover area so it no longer accidentally intercepts mouse events on nearby controls in narrow viewports
+- Restoring an archived session no longer fails when the session's local git branch has been deleted (e.g. after a pull request is merged and its branch auto-deleted).
+- The "working" activity indicator (sidebar Working badge and the in-conversation loading row) now keeps animating when the OS has Reduce Motion enabled, instead of freezing into a static shape that looked stuck.
+
 ## v0.2.28
 
 ### Added
