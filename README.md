@@ -8,7 +8,7 @@ The GitHub Copilot app is a desktop application for agent-driven development tha
 
 https://github.com/user-attachments/assets/50f215b5-f708-444e-83f7-3303bfa97963
 
-## Introduction and overview
+## Overview
 
 The GitHub Copilot app is a desktop application purpose-built for agent-driven development. It gives you a single place to direct AI agents across parallel workstreams, work with GitHub issues and pull requests, and manage the full development lifecycle—without context-switching between terminals, IDEs, and browser tabs.
 
@@ -18,9 +18,9 @@ The app is built on GitHub Copilot CLI and integrates natively with GitHub, so y
 
 ### Prerequisites
 
-Make sure [Git](https://github.com/git-guides/install-git) is installed.
-
-You'll also need an active [Copilot subscription](https://github.com/features/copilot/plans).
+- [Git](https://github.com/git-guides/install-git)
+- An active paid [GitHub Copilot](https://github.com/features/copilot/plans) subscription, including Copilot Pro, Pro+, Max, Business, or Enterprise plans
+- For Business and Enterprise developers, the **Copilot CLI** and **Editor preview features** policies must be enabled by your plan administrator.
 
 ### Install
 
@@ -48,15 +48,18 @@ This repo is the public home for the GitHub Copilot app. Use it to:
 The application source lives elsewhere; this repo is for releases, issues, and discussion.
 
 
-## Feedback and issues
+## Feedback
 
-Use the issue forms in this repository to report a bug or propose an improvement, join [Discussions](https://github.com/github/app/discussions/3), or send feedback from within the app. When filing an issue, please include:
+Report problems or feature requests for the GitHub Copilot app team in the [Issues](https://github.com/github/app/issues) tab. When filing an issue, please include:
 
 - The app version
 - Your operating system and version
 - Steps to reproduce
 - Expected vs. actual behavior
-- Screenshots or logs
+- Screenshots or videos
+- Logs from the `/collect-debug-logs` command. Note: These logs may contain sensitive information.
+
+For open-ended questions, please visit the [`Discussions`](https://github.com/github/app/discussions) tab.
 
 ## License
 
