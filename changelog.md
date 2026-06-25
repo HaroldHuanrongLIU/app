@@ -1,5 +1,37 @@
 # Changelog
 
+## v1.0.8
+
+### Highlights
+
+- Sessions now automatically remember your last model, reasoning effort, and long-context state — no more configuring a default model in settings.
+- Screen-reader users can navigate the chat transcript message-by-message using heading navigation, with each message announced as 'You said:' or 'Copilot said:'.
+- The issue pill in the composer now shows a color-coded status icon (open, completed, not planned), matching pull request pill behavior.
+- The Changes panel file list now always displays as a tree view, with a file count and diff stat shown in the toolbar.
+- Closing a Terminal tab now prompts for confirmation before ending the session, with a 'Don't ask again' option for future closes.
+
+### Changed
+
+- Canvas tool calls in the conversation now show the canvas icon instead of a generic tools icon, making them easier to recognize at a glance.
+- Closing a Terminal tab in the right panel now shows a confirmation dialog before ending the session. A "Don't ask again" checkbox lets you skip the prompt for future closes.
+- Merged pull requests now display the merge icon instead of the pull request icon, making merged state easier to recognize at a glance.
+- Screen-reader users can now navigate the chat transcript message-by-message using heading navigation — each message is announced as "You said:" or "Copilot said:" followed by a preview of the text.
+- The Changes panel file list now always displays as a tree view (the flat/tree toggle has been removed), the toolbar shows a file count and diff stat, file header names use lighter typography, and a doubled border under the toolbar is fixed.
+- The issue pill in the composer now shows a color-coded status icon (open, completed, not planned) matching the existing pull request pill behavior.
+
+### Fixed
+
+- Fixed microphone test playback in Settings → Voice playing only in the left ear on Linux when using multi-channel audio interfaces.
+- Fixed the selected file scope label in the Files panel toolbar (e.g. "Committed") showing in muted text instead of the default color, making the active selection easier to read.
+- In the Last updated sidebar view, session groups with recent child activity now correctly float to the top and land in the right date bucket (e.g. "Recent sessions") instead of staying pinned to the parent session's older timestamp.
+- Opening the Changes tab with the mouse no longer leaves a stuck focus ring on the file list.
+- The 'Created session' tool call row in conversations now shows the correct icon instead of a generic wrench.
+- The main composer is now hidden while an "Ask Question" prompt is open, preventing accidental messages from being sent instead of answering the prompt.
+
+### Removed
+
+- Removed the "Default model" section from Sessions settings. New sessions now automatically start with the model, reasoning effort, and long-context state from your last selection in the session model picker.
+
 ## v1.0.7
 
 ### Highlights
